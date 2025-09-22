@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workout Generator</title>
+  <style>
+     *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    body {
+        background-color: #fefaf4;
+        color: #3a3a3a;
+        line-height: 1.6;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 5%;
+        background: #d9f0e1;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        border: 2px solid #f8e6c3;
+    }
+
+    .Company_tile {
+        color: #2e7d32;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+    }
+
+    nav ul li a {
+        color: #2e7d32;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+        transition: all 0.3s ease;;
+    }
+    nav ul li a:active {
+        background: #81c784 ;
+        color: #fff;
+    }
+    .heading {
+      text-align: center;
+      padding: 20px;
+      color: #2e7d32;
+    }
+    body { 
+      font-family: Arial, sans-serif;
+       margin: 20px; 
+    }
+    h1 {
+       font-size: 1.5em;
+     }
+    label, select { 
+      display: block;
+       margin: 10px 0;
+    }
+    button {
+      margin: 5px 5px 5px 0;
+      padding: 6px 12px;
+    }
+    .section { 
+      border: 2px solid #f8e6c3;
+      padding: 40px;
+      margin: 20px auto;       
+      background-color: #d9f0e1;
+      color: #2e7d32;
+      display: flex;
+      flex-direction: column;        
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      justify-content: center;
+      align-items: center;;
+    }
+    .time {
+      font-size: 2em;
+       margin: 10px 0;
+    }
+    .footer {
+        text-align: center;
+        padding: 2rem;
+        background: #f8e6c3;
+        margin-top: 2rem;
+    }
+
+    .email-form {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .email-input {
+        border: 2px solid #2e7d32;
+        padding: 0.5rem 1rem;
+        border-radius: 30px;
+        outline: none;
+        width: 250px;
+        transition: border-color 0.3s ease;
+
+    }
+
+    footer p {
+        margin-top: 1rem;
+        color: #2e7d32;
+        font-size: 0.9rem;
+    }
+    .healthy {
+      background: linear-gradient(135deg, #81c784, #a5d6a7);
+      color: white;
+      padding: 0.75rem 1.5rem ;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #2e7d32;
+    }
+    h2 { 
+        color: #2e7d32;
+    }
+
+    /* Tablet screens (≤ 1024px) */
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 2rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .section {
+        max-width: 350px;
+        padding: 20px;
+    }
+
+    select, input[type="checkbox"], button {
+        font-size: 0.95rem;
+    }
+
+    .time {
+        font-size: 1.5em;
+    }
+}
+
+/* Mobile screens (≤ 768px) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .section {
+        width: 90%;
+        padding: 15px;
+    }
+
+    select, input[type="checkbox"], button {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+
+    h1.heading {
+        font-size: 1.5rem;
+    }
+}
+
+/* Extra small screens (≤ 480px) */
+@media (max-width: 480px) {
+    .Company_tile {
+        font-size: 1.5rem;
+    }
+
+    h1.heading {
+        font-size: 1.3rem;
+    }
+
+    .section {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .email-form {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .email-input {
+        width: 100%;
+    }
+
+    .healthy {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .time {
+        font-size: 1.2em;
+    }
+}
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  nav ul { display: none; flex-direction: column; gap: 0.5rem; }
+  nav ul.active { display: flex; }
+}
+
+  </style>
+</head>
+<body>
+  <header class="header"> 
+        <h1 class="Company_tile"> 🎍 GreenBite</h1> 
+        <div class="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li> 
+                    <a href="index.html" class="active">Home Page</a>
+                </li>
+                <li>
+                    <a href="Healthy-Recipes.html">Health Recipes</a>
+                </li>
+                <li>
+                    <a href="Calorie-&-Nutrition-Calculator.html">Calorie & Nutrition Calculator</a>
+                </li>
+                <li>
+                    <a href="Workout-Generator-Page.html">Workout Generator</a>
+                </li>
+                <li>
+                    <a href="Mindfulness-Page.html">Mindfulness</a>
+                </li>
+                <li>
+                    <a href="Contact-&-Feedback.html">Contact and Feedback</a>
+                </li>
+            </ul>
+    </nav>
+</header>
+  <h1 class="heading">Workout Generator</h1>
+
+  <div class="section">
+    <h2>Body part</h2>
+    <label for="body">select Body parts</label>
+    <select id="body">
+      <option>Full body</option>
+      <option>Upper body</option>
+      <option>Lower body</option>
+      <option>Arms</option>
+      <option>Legs</option>
+      <option>Core</option>
+    </select>
+
+    <h2>Equipment</h2>
+    <label><input type="checkbox"> None</label>
+    <label><input type="checkbox"> Dumbbells</label>
+    <label><input type="checkbox"> Resistance bands</label>
+    <label><input type="checkbox"> Kettlebell</label>
+    <label><input type="checkbox"> Mat</label>
+
+    <button>Generate</button>
+    <button>Clear</button>
+  </div>
+
+  <div class="section">
+    <h2>Your Plan</h2>
+    <div>No exercises yet</div>
+  </div>
+
+  <div class="section">
+    <h2>Timer</h2>
+    <div class="time">00:30</div>
+    <button>Start</button>
+    <button>Pause</button>
+    <button>Next</button>
+  </div>
+  <footer class="footer">
+        <p> 🌱 Fuel your inbox with wellness bites - subscribe now: </p>
+        <form class="email-form">
+            <input type="email" name="Email" class="email-input" placeholder="Enter your email address">
+            <button type="submit" class="healthy"> subscribe</button>
+
+        </form>
+        
+    </footer>
+    <script src="js-pages/Workout-Generator_page.js"></script>
+</body>
+</html>

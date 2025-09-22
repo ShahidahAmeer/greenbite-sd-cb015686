@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="description" content="GreenBite - Healthy recipes, nutrition tips, and wellness inspiration to live better and eat smarter.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenBite | Contact & Feedback</title>
+  <style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  body {
+    background-color: #fefaf4;
+    color: #3a3a3a;
+    line-height: 1.6;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background: #d9f0e1;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .Company_tile {
+    color: #2e7d32;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav ul li a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+  }
+  nav ul li a.active {
+    background: #81c784 ;
+    color: #fff;
+  }
+    
+  .heading {
+      text-align: center;
+      padding: 20px;
+      color: #2e7d32;
+  }
+  .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #d9f0e1;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  h2 {
+      color: #2e7d32;
+      margin-bottom: 10px;
+  }
+  form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+  }
+  input, textarea, button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  button {
+    background: #2e7d32;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+  }
+  button:hover {
+    background: #1b5e20;
+  }
+  .confirmation {
+    margin-top: 10px;
+    padding: 10px;
+    background: #c8e6c9;
+    color: #1b5e20;
+    border-radius: 6px;
+    display: none;
+    }
+
+    #thanks:target {
+      display: block;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin-top: 20px;
+      border-radius: 12px;
+
+    }
+    details {
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 10px;
+      background: #e8f5e9;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      outline: none;
+    }
+    details[open] {
+      background: #f9f9f9;
+    }
+    
+  .footer {
+        text-align: center;
+        padding: 2rem;
+        background: #f8e6c3;
+        margin-top: 2rem;
+    }
+
+    .email-form {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .email-input {
+        border: 2px solid #2e7d32;
+        padding: 0.5rem 1rem;
+        border-radius: 30px;
+        outline: none;
+        width: 250px;
+        transition: border-color 0.3s ease;
+
+    }
+
+    footer p {
+        margin-top: 1rem;
+        color: #1a1a1a;
+        font-size: 0.9rem;
+    }
+    .healthy {
+      background: linear-gradient(135deg, #81c784, #a5d6a7);
+      color: white;
+      padding: 0.75rem 1.5rem ;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+      }
+
+      .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: #2e7d32;
+      }
+
+  /* Tablet screens (≤ 1024px) */
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 2rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    iframe {
+        height: 250px;
+    }
+}
+
+/* Mobile screens (≤ 768px) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .container {
+        width: 95%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    input, textarea, button {
+        font-size: 0.95rem;
+        padding: 8px;
+    }
+
+    h1.heading {
+        font-size: 1.5rem;
+    }
+
+    iframe {
+        height: 200px;
+    }
+}
+
+/* Extra small screens (≤ 480px) */
+@media (max-width: 480px) {
+    .Company_tile {
+        font-size: 1.5rem;
+    }
+
+    h1.heading {
+        font-size: 1.3rem;
+    }
+
+    input, textarea, button {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+
+    .email-form {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .email-input {
+        width: 100%;
+    }
+
+    .healthy {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  nav ul { display: none; flex-direction: column; gap: 0.5rem; }
+  nav ul.active { display: flex; }
+}
+
+
+  </style>
+</head>
+<body>
+  <header class="header"> 
+         <h1 class="Company_tile"> 🎍 GreenBite</h1> 
+         <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li> 
+                    <a href="index.html" class="active">Home Page</a>
+                </li>
+                <li>
+                    <a href="Healthy-Recipes.html">Health Recipes</a>
+                </li>
+                <li>
+                    <a href="Calorie-&-Nutrition-Calculator.html">Calorie & Nutrition Calculator</a>
+                </li>
+                <li>
+                    <a href="Workout-Generator-Page.html">Workout Generator</a>
+                </li>
+                <li>
+                    <a href="Mindfulness-Page.html">Mindfulness</a>
+                </li>
+                <li>
+                    <a href="Contact-&-Feedback.html">Contact and Feedback</a>
+                </li>
+            </ul>
+    </nav>
+</header>
+  <h1 class="heading">Contact and feedback</h1>
+  <div class="container">
+
+    <h2>Send us your feedback</h2>
+
+    <form action="#thanks" method="get">
+      <label for="name">Your Name</label>
+      <input id="name" type="text" name="name" placeholder="Your Name" required>
+
+      <label for="email">Your Email</label>
+      <input id="email" type="email" name="email" placeholder="Your Email" required>
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="thanks" class="confirmation" role="alert">
+      ✅ Thank you! Your feedback has been submitted.
+    </div>
+
+
+    <h2>Our Location</h2>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.503182342216!2d79.85903981534899!3d6.918595306871543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596d3cb8fe07%3A0x2b0ae2edd563a661!2sAsia%20Pacific%20Institute%20of%20Information%20Technology%20(APIIT)!5e0!3m2!1sen!2slk!4v1699450000000!5m2!1sen!2slk"
+      title="Google Map showing GreenBite location in Colombo, Sri Lanka"
+      allowfullscreen="" loading="lazy">
+    </iframe>
+
+    <h2>Frequently Asked Questions</h2>
+    <details>
+      <summary>What is GreenBite?</summary>
+      <p>GreenBite is a sustainable food initiative focused on healthy and eco-friendly meals.</p>
+    </details>
+    <details>
+      <summary>Where is your HQ?</summary>
+      <p>Our headquarters are located in Colombo, Sri Lanka.</p>
+    </details>
+    <details>
+      <summary>How can I contact support?</summary>
+      <p>You can use this form or email us at support@greenbite.com.</p>
+    </details>
+  </div>
+  <footer class="footer">
+        <p> 🌱 Fuel your inbox with wellness bites - subscribe now: </p>
+        <form class="email-form">
+            <input type="email" name="Email" class="email-input" placeholder="Enter your email address">
+            <button type="submit"> subscribe</button>
+
+        </form>
+        
+    </footer>
+
+
+    <script src="js-pages/Contact_&_Feedback.js"></script>
+</body>
+</html>

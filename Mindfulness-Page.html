@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindfulness</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    body {
+        background-color: #fefaf4;
+        color: #3a3a3a;
+        line-height: 1.6;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        padding: 1.5rem 5%;
+        background: #d9f0e1;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .Company_tile {
+        color: #2e7d32;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+    }
+
+    nav ul li a {
+        color: #2e7d32;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+        transition: all 0.3s ease;;
+    }
+    nav ul li a:active {
+        background: #81c784 ;
+        color: #fff;
+    }
+    .heading {
+      text-align: center;
+      padding: 20px;
+      color: #2e7d32;
+    }
+    
+    .container {
+      border: 2px solid #f8e6c3;
+      padding: 40px;
+      margin: 20px auto;       
+      background-color: #d9f0e1;
+      color: #2e7d32;
+      display: flex;
+      flex-direction: column;        
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      justify-content: center;
+      align-items: center;;
+    }
+
+    h1 {
+        color: #2c3e50;
+    }
+
+    .breathing-circle {
+        width: 150px;
+        height: 150px;
+        margin: 2rem auto;
+        border-radius: 50%;
+        background-color: #2e7d32;
+        transition: transform 4s ease-in-out;
+    }
+
+    .timer input {
+        width: 60px;
+        padding: 5px;
+        margin-right: 10px;
+    }
+
+    .timer button, .sounds button {
+        padding: 5px 10px;
+        margin: 5px;
+        cursor: pointer;
+    }
+    .footer {
+        text-align: center;
+        padding: 2rem;
+        background: #f8e6c3;
+        margin-top: 2rem;
+    }
+
+    .email-form {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .email-input {
+        border: 2px solid #2e7d32;
+        padding: 0.5rem 1rem;
+        border-radius: 30px;
+        outline: none;
+        width: 250px;
+        transition: border-color 0.3s ease;
+
+    }
+
+    footer p {
+        margin-top: 1rem;
+        color: #2e7d32;
+        font-size: 0.9rem;
+    }
+    .healthy {
+        background: linear-gradient(135deg, #81c784, #a5d6a7);
+        color: white;
+        padding: 0.75rem 1.5rem ;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.3s ease;
+    }
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: #2e7d32;
+    }
+    /* Tablet screens (≤ 1024px) */
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 2rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .container {
+        max-width: 350px;
+        padding: 20px;
+    }
+
+    .breathing-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .timer input {
+        width: 50px;
+    }
+}
+
+/* Mobile screens (≤ 768px) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .container {
+        width: 90%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .breathing-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    input, button {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+
+    h1.heading {
+        font-size: 1.5rem;
+    }
+}
+
+/* Extra small screens (≤ 480px) */
+@media (max-width: 480px) {
+    .Company_tile {
+        font-size: 1.5rem;
+    }
+
+    h1.heading {
+        font-size: 1.3rem;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .breathing-circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .timer input {
+        width: 40px;
+    }
+
+    .email-form {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .email-input {
+        width: 100%;
+    }
+
+    .healthy {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  nav ul { display: none; flex-direction: column; gap: 0.5rem; }
+  nav ul.active { display: flex; }
+}
+
+    </style>
+</head>
+<body>
+    <header class="header"> 
+        <h1 class="Company_tile"> 🎍 GreenBite</h1>
+        <div class="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li> 
+                    <a href="index.html" class="active">Home Page</a>
+                </li>
+                <li>
+                    <a href="Healthy-Recipes.html">Health Recipes</a>
+                </li>
+                <li>
+                    <a href="Calorie-&-Nutrition-Calculator.html">Calorie & Nutrition Calculator</a>
+                </li>
+                <li>
+                    <a href="Workout-Generator-Page.html">Workout Generator</a>
+                </li>
+                <li>
+                    <a href="Mindfulness-Page.html">Mindfulness</a>
+                </li>
+                <li>
+                    <a href="Contact-&-Feedback.html">Contact and Feedback</a>
+                </li>
+            </ul>
+    </nav>
+</header>
+<h1 class="heading">Mindfullness</h1>
+    <div class="container">
+        <div class="breathing-circle"></div>
+        <p id="breathText">Inhale...</p>
+
+        <div class="timer">
+            <input type="number" id="minutes" placeholder="Minutes" min="1">
+            <button id="startTimer">Start Timer</button>
+            <p id="timerDisplay">00:00</p>
+        </div>
+
+        <div class="sounds">
+            <button id="sound1">Play Forest</button>
+            <button id="sound2">Play rain</button>
+        </div>
+
+        <p>Completed Sessions: <span id="sessionCount">0</span></p>
+    </div>
+    <footer class="footer">
+        <p> 🌱 Fuel your inbox with wellness bites - subscribe now: </p>
+        <form class="email-form">
+            <input type="email" name="Email" class="email-input" placeholder="Enter your email address">
+            <button type="submit" class="healthy"> subscribe</button>
+
+        </form>
+        
+    </footer>
+    <script src="js-pages/mindfullness.js"></script>
+    
+</body>
+</html>

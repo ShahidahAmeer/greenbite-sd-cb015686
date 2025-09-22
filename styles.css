@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: #fefaf4;
+    color: #3a3a3a;
+    line-height: 1.6;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background: #d9f0e1;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.Company_tile {
+    color: #2e7d32;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar ul.active {
+  display: flex; 
+}
+nav ul li a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;;
+}
+nav ul li a:active {
+    background: #81c784 ;
+    color: #fff;
+}
+
+.hero {
+    height: 70vh;
+    background: url(images/photo-1590523278191-995cbcda646b\ \(1\)\ \(1\).jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color:  #ffffff;
+    position: relative;
+}
+
+.hero_infor {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+}
+
+.hero h2
+{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: faswInDown 1.2s ease;
+}
+
+.hero p{
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1.2s ease;
+}
+
+.healthy {
+    background: linear-gradient(135deg, #81c784, #a5d6a7);
+    color: white;
+    padding: 0.75rem 1.5rem ;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.about {
+    padding: 3rem 10%;
+    text-align: center;
+    background: #d9f0e1;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color:  #388e3c;
+}
+.about p {
+    font-size: 1.1rem;
+    color:#3a3a3a;
+}
+
+.highlight {
+    color: #66bb6a;
+    font-weight: bold;
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background: #f8e6c3;
+    margin-top: 2rem;
+}
+
+.email-form {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.email-input {
+    border: 2px solid #2e7d32;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    outline: none;
+    width: 250px;
+    transition: border-color 0.3s ease;
+
+}
+
+footer p {
+    margin-top: 1rem;
+    color: #2e7d32;
+    font-size: 0.9rem;
+}
+
+.hamburger {
+  display: none; /* show only on small screens */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #2e7d32;
+}
+
+/* Tablet screens (≤ 1024px) */
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 2rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .about {
+        padding: 2rem 5%;
+    }
+}
+
+/* Mobile screens (≤ 768px) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .hero {
+        height: auto;
+        padding: 3rem 1rem;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .about h2 {
+        font-size: 1.5rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    .email-form {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .email-input {
+        width: 100%;
+    }
+}
+
+/* Extra small screens (≤ 480px) */
+@media (max-width: 480px) {
+    .Company_tile {
+        font-size: 1.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.4rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .healthy {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+    display: flex; }
+    nav ul { display: none; flex-direction: column; width: 100%; }
+    nav ul.active { display: flex; }
+}
+    

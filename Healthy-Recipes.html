@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Recipes</title>
+    <style>
+  *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    body {
+        background-color: #fefaf4;
+        color: #3a3a3a;
+        line-height: 1.6;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 5%;
+        background: #d9f0e1;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .Company_tile {
+        color: #2e7d32;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+    }
+
+    nav ul li a {
+        color: #2e7d32;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+        transition: all 0.3s ease;;
+    }
+    nav ul li a:active {
+        background: #81c784 ;
+        color: #fff;
+    }
+
+
+    
+    .search {
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    .search input {
+        width: 80%;
+        padding: 0.8rem;
+        font-size: 1.1rem;
+        border: 2px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+    }
+
+    .search input:focus {
+        border-color: #C4A67E;
+    }
+
+
+
+    .menu {
+       background-color: #fff;
+       padding: 2rem 8%;
+       margin: 2rem auto;
+       border-radius: 12px;
+       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+       display: flex;
+       flex-wrap: wrap;
+        gap: 20px;
+}
+
+    .menu_item {
+        background-color: #d9f0e1;
+        width: 260px;
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin: 1rem auto;
+        display: flex;
+    }
+
+    .menu_item img {
+        width: 120px;
+        height: 120px;
+        border-radius: 10px;
+        object-fit: cover; 
+        margin: 10px;   
+    }
+
+    .menu h1 {
+        text-align: center;
+        color: #2e7d32;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+    }
+    .menu p {
+        margin-top: 0.8rem;
+        font-weight: 600;
+        color: #2e7d32;
+    }
+
+    .menu_item:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    
+    .recipe-card .btn {
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        display: inline-block;
+        margin-top: 1rem;
+    }
+
+
+
+    .footer {
+        text-align: center;
+        padding: 2rem;
+        background: #f8e6c3;
+        margin-top: 2rem;
+    }
+
+    .email-form {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .email-input {
+        border: 2px solid #2e7d32;
+        padding: 0.5rem 1rem;
+        border-radius: 30px;
+        outline: none;
+        width: 250px;
+        transition: border-color 0.3s ease;
+
+    }
+
+    footer p {
+        margin-top: 1rem;
+        color: #2e7d32;
+        font-size: 0.9rem;
+    }
+    .healthy {
+        background: linear-gradient(135deg, #81c784, #a5d6a7);
+        color: white;
+        padding: 0.75rem 1.5rem ;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.3s ease;
+    }
+    .heading {
+        text-align: center;
+        padding: 20px;
+        color: #2e7d32;
+    }
+    h1 {
+        color: #2e7d32;
+    }
+    h2{
+        color: #2e7d32;
+    }
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: #2e7d32;
+    }
+
+    /* Tablet screens (≤ 1024px) */
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 2rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+}
+
+/* Mobile screens (≤ 768px) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .search input {
+        width: 95%;
+        font-size: 1rem;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu_item {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu_item img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Extra small screens (≤ 480px) */
+@media (max-width: 480px) {
+    .Company_tile {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .email-form {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .email-input {
+        width: 100%;
+    }
+
+    .healthy {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 768px) {
+    .hamburger {
+    display: flex; }
+    nav ul { display: none; flex-direction: column; width: 100%; }
+    nav ul.active { display: flex; }
+}
+
+    </style>
+</head>
+<body>
+    <header class="header"> 
+        <h1 class="Company_tile"> 🎍 GreenBite</h1>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li> 
+                    <a href="index.html" class="active">Home Page</a>
+                </li>
+                <li>
+                    <a href="Healthy-Recipes.html">Health Recipes</a>
+                </li>
+                <li>
+                    <a href="Calorie-&-Nutrition-Calculator.html">Calorie & Nutrition Calculator</a>
+                </li>
+                <li>
+                    <a href="Workout-Generator-Page.html">Workout Generator</a>
+                </li>
+                <li>
+                    <a href="Mindfulness-Page.html">Mindfulness</a>
+                </li>
+                <li>
+                    <a href="Contact-&-Feedback.html">Contact and Feedback</a>
+                </li>
+            </ul>
+    </nav>
+</header>
+<h1 class="heading">Healthy Recipes</h1>
+
+    <section class=" search">
+        <h2>Search Recipe</h2>
+        <input type="text" class="recipe-search" placeholder="search for your favourite Recipes....">
+    </section>
+
+
+  
+    <section class="menu">
+        <h2> 🍳 Breakfast Menu</h2> 
+        <div class="menu_item">
+            <img src="images/Amazing-Salads-with-Roasted-Vegetables.webp" alt="Salads with Roasted Vegetables">
+            <p>Roasted Vegetable Salad Bowl</p>
+        </div>
+        <div class="menu_item">
+            <img src="images/Dill-Pickle-Egg-Salad-Recipe.webp" alt="pickling the eggs">
+            <p>Dill Pickle Egg Salad</p>
+        </div>
+        <div class="menu_item">
+             <img src="images/Healthy-Mini-Meatball-and-Stars-Soup.webp" alt="Mini Meatball and Stars Soup">
+            <p>Healthy Mini Meatball and Stars Soup</p>
+        </div> 
+        <div class="menu_item">
+            <img src="images/Tofu-Tzatziki-Bowls.webp" alt="Tofu bowl">
+            <p>Tofu Tzatziki Bowls</p>
+        </div>
+    </section>
+
+    <section class="menu">
+        <h2> 🥗 lunch Menu</h2>   
+        <div class="menu_item">
+            <img src="images/The-Best-Cauliflower-Rice-Recipe.webp" alt=" Cauliflower Rice">
+            <p>Healthy Cauliflower Rice</p>
+        </div>
+        <div class="menu_item">
+            <img src="images/Three-Bean-Chili.webp" alt="Bowl of Three-Bean Chili">
+            <p>Three-Bean Chili</p>
+        </div>
+        <div class="menu_item">
+            <img src="images/Healthy-Farro-Fried-Rice-by-Food-Networt-Kitchen.webp" alt="Farro Fried ">
+            <p>Farro Fried Rice</p>
+        </div>
+        <div class="menu_item">
+            <img src="images/How-to-Cook-Brown-Rice.webp" alt="Baked Brown Rice">
+            <p>Baked Brown Rice</p>
+        </div>
+    </section>
+
+   
+    <section class="menu">
+        <h2>🍿 Evening Snack</h2>  
+        <div class="menu_item">
+            <img src="images/Smoky-Caribbean-Style-Kidney-Beans.webp" alt="bean Dip">
+            <p>Red Kidney Bean Dip</p>
+        </div>
+        <div class="menu_item">
+            <img src="images/1234.webp" alt="Badenjan Dip">
+            <p>Badenjan Dip</p>
+        </div>
+        <div class="menu_item">
+             <img src="images/Fattoush-Salad-Recipe-Chefjar.webp" alt="Green Fatoush">
+            <p>Green Fatoush</p>
+        </div>
+        <div class="menu_item">
+            <img src="images/Stovetop-Smoked-Pecans.webp" alt="Stovetop Smoked Pecans">
+            <p>Stovetop Smoked Pecans</p>
+        </div>
+    </section>
+
+
+    <section class="menu">
+        <h2> 🍲 Dinner Menu</h2>   
+        <div class="menu_item">
+            <img src="images/2345.webp" alt="Sheet Pan">
+            <p>Sausage and Peppers Sheet Pan Dinner</p>
+        </div>
+        <div class="menu_item">
+            <img src="images/EASY-One-Pan-Bee-Cabbage-Skillet-for-Clean-Eating-Meal-Prep.webp" alt="Shrimp and Quinoa Skillet Meal">
+            <p>One-Skillet Shrimp and Quinoa</p>
+        </div>
+        <div class="menu_item">
+             <img src="images/Dry-Rub-Ribs-Memphis.webp" alt="Memphis">
+            <p>Dry Rub Ribs- Memphis</p>
+        </div>
+        <div class="menu_item">
+            <img src="images/Dump-and-Bake-Chicken-Parm-Casserole-Recipes-by-Lina.webp" alt="Dump Chicken ">
+            <p>Dump Chicken Bake</p>
+        </div>
+    </section>
+    <footer class="footer">
+        <p> 🌱 Fuel your inbox with wellness bites - subscribe now: </p>
+        <form class="email-form">
+            <input type="email" name="Email" class="email-input" placeholder="Enter your email address">
+            <button type="submit" class="healthy"> subscribe</button>
+
+        </form>
+        
+    </footer>
+    <script src="js-pages/Healthy-Recipes.js"></script>
+</body>
+</html>
