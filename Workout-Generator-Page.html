@@ -145,6 +145,9 @@
     h2 { 
         color: #2e7d32;
     }
+    .emaillabel {
+        display: none;
+    }
 
     /* Tablet screens (≤ 1024px) */
 @media (max-width: 1024px) {
@@ -314,6 +317,7 @@
   <footer class="footer">
         <p> 🌱 Fuel your inbox with wellness bites - subscribe now: </p>
         <form class="email-form">
+             <label for="email" class="emaillabel">Email Address:</label>
             <input type="email" name="Email" class="email-input" placeholder="Enter your email address">
             <button type="submit" class="healthy"> subscribe</button>
 
